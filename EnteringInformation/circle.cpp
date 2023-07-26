@@ -18,5 +18,4 @@ int main()
 	std::cout << "Length: " << length << std::endl;
 
 	return 0;
-
 }
