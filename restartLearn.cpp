@@ -2,9 +2,12 @@
 
 int main()
 {
-  int a = 0;
-  std::cout << "enter a number: ";
+  int a, b;
+  int sum;
+  std::cout << "Enter two numbers: ";
   std::cin >> a;
-  std::cout << "the number you entered is: " << a << std::endl;
+  std::cin >> b;
+  sum = a + b;
+  std::cout << "Sum is: " << sum << std::endl;
   return 0;
 }
