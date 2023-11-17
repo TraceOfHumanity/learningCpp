@@ -2,8 +2,9 @@
 
 int main()
 {
-  const double PI = 3.1415926536;
-
-  std::cout << "PI = " << PI << std::endl;
+  int a = 0;
+  std::cout << "enter a number: ";
+  std::cin >> a;
+  std::cout << "the number you entered is: " << a << std::endl;
   return 0;
 }
