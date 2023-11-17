@@ -2,8 +2,8 @@
 
 int main()
 {
-  int num1 = 10;
-  int num2 = 20;
-  std::cout << "num1 + num2 = " << num1 + num2 << std::endl;
+  const double PI = 3.1415926536;
+
+  std::cout << "PI = " << PI << std::endl;
   return 0;
 }
