@@ -1,65 +1,27 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
-void Show(const int array[], int size);
-void Show(const char array[], int size);
+template <typename T>
+void Show(const T arr[], int size);
 
 int main()
 {
-    srand(time(NULL));
-    const int size = 10;
-    const char alphabet = 26;
-    int array[size];
-    char array2[alphabet] = {
-        'a',
-        'b',
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'h',
-        'r',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z'};
+    const int size = 5;
+    int arr[size] = {1, 2, 3, 4, 5};
+    double arr2[size] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    char arr3[size] = {'a', 'b', 'c', 'd', 'e'};
 
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = rand() % 10;
-        array2[i] = 'a';
-    }
-
-    Show(array, size);
-    Show(array2, alphabet);
+    Show(arr, size);
+    Show(arr2, size);
+    Show(arr3, size);
 
     return 0;
 }
 
-void Show(const int array[], int size)
+template <typename T>
+void Show(const T arr[], int size)
 {
     for (int i = 0; i < size; i++)
-        std::cout << array[i] << " ";
-    std::cout << std::endl;
-}
-
-void Show(const char array[], int size)
-{
-    for (int i = 0; i < size; i++)
-        std::cout << array[i] << " ";
-    std::cout << std::endl;
+    {
+        std::cout << arr[i] << std::endl;
+    }
 }
