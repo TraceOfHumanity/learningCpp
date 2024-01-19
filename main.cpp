@@ -2,32 +2,34 @@
 #include <cstdlib>
 #include <ctime>
 
-void InitializeArray(int array[], int size);
-void ShowArray(int array[], int size);
+void InitializeArray(char array[], int size);
+void ShowArray(char array[], int size);
 
 int main()
 {
-    srand((unsigned)time(nullptr));
-    const int size = 10;
-    int array[size];
-    InitializeArray(array, size);
-    ShowArray(array, size);
+    // srand((unsigned)time(nullptr));
+    const int size = 26;
+    char alphabet[size];
+
+    InitializeArray(alphabet, size);
+    ShowArray(alphabet, size);
 
     return 0;
 }
 
-void InitializeArray(int array[], int size)
+void InitializeArray(char array[], int size)
 {
     for (int i = 0; i < size; ++i)
     {
-        array[i] = rand();
+        array[i] = 'A' + i;
     }
 }
 
-void ShowArray(int array[], int size)
+void ShowArray(char array[], int size)
 {
     for (int i = 0; i < size; ++i)
     {
-        std::cout << array[i] << std::endl;
+        std::cout << array[i] << " ";
     }
+    std::cout << std::endl;
 }
