@@ -1,27 +1,33 @@
 #include <iostream>
 
-template <typename T>
-void Show(const T arr[], int size);
-
 int main()
 {
-    const int size = 5;
-    int arr[size] = {1, 2, 3, 4, 5};
-    double arr2[size] = {1.1, 2.2, 3.3, 4.4, 5.5};
-    char arr3[size] = {'a', 'b', 'c', 'd', 'e'};
+    int arr[5] = {1, 2, 3, 4, 5};
+    bool isFound = false;
+    int index = 0;
+    std::cout << "Enter a number:";
+    int value;
+    std::cin >> value;
 
-    Show(arr, size);
-    Show(arr2, size);
-    Show(arr3, size);
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] == value)
+        {
+            isFound = true;
+            index = i;
+            break;
+        }
+    }
+
+    if (isFound)
+    {
+        std::cout << "Found" << std::endl;
+        std::cout << "Index: " << index << std::endl;
+    }
+    else
+    {
+        std::cout << "Not Found" << std::endl;
+    }
 
     return 0;
-}
-
-template <typename T>
-void Show(const T arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        std::cout << arr[i] << std::endl;
-    }
 }
