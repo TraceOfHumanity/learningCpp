@@ -1,31 +1,16 @@
 #include <iostream>
 
+int Add(int a, int b)
+{
+  return a + b;
+}
 
-int main () {
-  const int size = 5;
+int main()
+{
+  int a = 5;
+  int b = 10;
 
-  int arr1[size], arr2[size * 2];
-
-  for(int i = 0; i < size; i++) {
-    arr1[i] = i;
-  }
-
-  for(int i = 0; i < size * 2; i++) {
-    if(i < size) {
-      arr2[i] = arr1[i];
-    } else {
-      arr2[i] = i;
-    }
-  }
-
-  for(int i = 0; i < size; i++) {
-    std::cout << arr1[i] << std::endl;
-  }
-    std::cout << "====================" << std::endl;
-
-  for(int i = 0; i < size * 2; i++) {
-    std::cout << arr2[i] << std::endl;
-  }
+  std::cout << Add(a, b) << std::endl;
 
   return 0;
 }
