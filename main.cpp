@@ -2,6 +2,7 @@
 
 void initializeArray(int array[], int arraySize);
 void printArray(int array[], int arraySize);
+int linearSearch(int array[], int arraySize, int find, bool isFind = false);
 
 int main()
 {
@@ -16,13 +17,5 @@ int main()
     int find;
     std::cin >> find;
 
-    for (int i = 0; i <= arraySize; i++)
-    {
-        if (array[i] == find)
-        {
-            std::cout << "Found " << find << " at index " << i << std::endl;
-            isFind = true;
-            break;
-        }
-    }
+    linearSearch(array, arraySize, find, isFind);
 };
