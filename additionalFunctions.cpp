@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void initializeArray(int array[], int arraySize)
 {
@@ -30,3 +31,12 @@ int linearSearch(int array[], int arraySize, int find, bool isFind = false)
   }
   return -1;
 }
+
+void initializeArrayRandom(int array[], int arraySize)
+{
+  srand(static_cast<unsigned>(time(nullptr)));
+  for (int i = 0; i <= arraySize; i++)
+  {
+    array[i] = rand() % 100 + 1;
+  }
+};
