@@ -1,33 +1,13 @@
 #include <iostream>
 
+void initializeArray(int array[], int arraySize);
+void printArray(int array[], int arraySize);
+
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
-    bool isFound = false;
-    int index = 0;
-    std::cout << "Enter a number:";
-    int value;
-    std::cin >> value;
+    int arraySize = 20;
+    int array[arraySize];
 
-    for (int i = 0; i < 5; i++)
-    {
-        if (arr[i] == value)
-        {
-            isFound = true;
-            index = i;
-            break;
-        }
-    }
-
-    if (isFound)
-    {
-        std::cout << "Found" << std::endl;
-        std::cout << "Index: " << index << std::endl;
-    }
-    else
-    {
-        std::cout << "Not Found" << std::endl;
-    }
-
-    return 0;
-}
+    initializeArray(array, arraySize);
+    printArray(array, arraySize);
+};
