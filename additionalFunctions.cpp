@@ -40,3 +40,23 @@ void initializeArrayRandom(int array[], int arraySize)
     array[i] = rand() % 100 + 1;
   }
 };
+
+int sortSelection(int array[], int arraySize)
+{
+  int minIndex = 0;
+  for (int i = 0; i <= arraySize; i++)
+  {
+    minIndex = i;
+    for (int j = i + 1; j <= arraySize; j++)
+    {
+      if (array[j] < array[minIndex])
+      {
+        minIndex = j;
+      }
+    }
+    std::swap(array[i], array[minIndex]);
+  }
+  std::cout << "Sorted array: ";
+  printArray(array, arraySize);
+  return 0;
+};
