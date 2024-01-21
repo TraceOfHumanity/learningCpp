@@ -2,7 +2,7 @@
 
 void initializeArray(int array[], int arraySize)
 {
-  for (int i = 1; i <= arraySize; i++)
+  for (int i = 0; i <= arraySize; i++)
   {
     array[i] = i;
   }
@@ -10,7 +10,7 @@ void initializeArray(int array[], int arraySize)
 
 void printArray(int array[], int arraySize)
 {
-  for (int i = 1; i <= arraySize; i++)
+  for (int i = 0; i <= arraySize; i++)
   {
     std::cout << array[i] << " ";
   }
