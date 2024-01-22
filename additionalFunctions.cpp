@@ -56,7 +56,24 @@ int sortSelection(int array[], int arraySize)
     }
     std::swap(array[i], array[minIndex]);
   }
-  std::cout << "Sorted array: ";
+  std::cout << "Sorted Selection array: ";
+  printArray(array, arraySize);
+  return 0;
+};
+
+int sortBubble(int array[], int arraySize)
+{
+  for (int i = 0; i <= arraySize; i++)
+  {
+    for (int j = 0; j <= arraySize - i - 1; j++)
+    {
+      if (array[j] > array[j + 1])
+      {
+        std::swap(array[j], array[j + 1]);
+      }
+    }
+  }
+  std::cout << "Sorted Bubble array: ";
   printArray(array, arraySize);
   return 0;
 };
