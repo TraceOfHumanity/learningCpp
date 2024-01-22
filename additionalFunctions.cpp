@@ -97,3 +97,15 @@ int sortInsertion(int array[], int arraySize)
   printArray(array, arraySize);
   return 0;
 };
+
+int factorial(int n)
+{
+  if (n == 0)
+  {
+    return 1;
+  }
+  else
+  {
+    return n * factorial(n - 1);
+  }
+};
