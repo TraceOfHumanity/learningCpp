@@ -77,3 +77,23 @@ int sortBubble(int array[], int arraySize)
   printArray(array, arraySize);
   return 0;
 };
+
+int sortInsertion(int array[], int arraySize)
+{
+  int key = 0;
+  int j = 0;
+  for (int i = 1; i <= arraySize; i++)
+  {
+    key = array[i];
+    j = i - 1;
+    while (j >= 0 && array[j] > key)
+    {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = key;
+  }
+  std::cout << "Sorted Insertion array: ";
+  printArray(array, arraySize);
+  return 0;
+};
