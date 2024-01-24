@@ -8,6 +8,8 @@ int main()
 
     std::cout << "a = " << a << std::endl;
     std::cout << "&a = " << &a << std::endl;
+    std::cout << "ptr = " << ptr << std::endl;
+    std::cout << "*ptr = " << *ptr << std::endl;
 
     return 0;
 }
