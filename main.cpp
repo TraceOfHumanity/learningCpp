@@ -1,18 +1,16 @@
 #include <iostream>
-void Show(const char *str);
 
 int main()
 {
-    const char str[] = "Hello World!";
-    Show(str);
-    return 0;
-}
+    int *a = new int{5};
 
-void Show(const char *str)
-{
-    while (*str != '\0')
-    {
-        std::cout << *str << " ";
-        str++;
-    }
+    std::cout << a << std::endl;
+    std::cout << *a << std::endl;
+
+    *a = 10;
+
+    std::cout << a << std::endl;
+    std::cout << *a << std::endl;
+
+    return 0;
 }
