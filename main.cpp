@@ -2,7 +2,10 @@
 
 int main()
 {
-    std::cout << R"(C:\test\new\folder )" << std::endl;
+    std::cout << "Enter a number: ";
+    int x;
+    std::cin >> x;
+    std::cout << "You entered " << x << '\n';
+
     return 0;
 }
-
