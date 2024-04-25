@@ -2,6 +2,7 @@
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << R"(C:\test\new\folder )" << std::endl;
     return 0;
 }
+
