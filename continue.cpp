@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int continueFunction()
 {
   int sum = 0;
   int num;
