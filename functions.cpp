@@ -17,7 +17,7 @@ void Show(int arr[], int size)
   }
 }
 
-int main()
+int mainFunction()
 {
   int size = 20;
   int arr[size];
