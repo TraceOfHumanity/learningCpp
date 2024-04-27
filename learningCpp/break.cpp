@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int breakFunction()
 {
   int criticalNumber = 5;
   int min, max;
