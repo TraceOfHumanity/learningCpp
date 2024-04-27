@@ -2,11 +2,8 @@
 
 int main()
 {
-    int num1, num2;
-    int sum;
-    std::cout << "Enter two numbers: ";
-    std::cin >> num1 >> num2;
-    sum = num1 + num2;
-    std::cout << "The sum of " << num1 << " and " << num2 << " is " << sum << std::endl;
-    return 0;
+  int a = 3, b = 4;
+  double result = static_cast<double>(a) / b;
+  std::cout << "The result is: " << result << std::endl;
+  return 0;
 }
