@@ -2,23 +2,38 @@
 
 int main()
 {
-  int sum = 0;
-  int num;
+  // int arr[20];
 
-  do{
-    std::cout << "Enter positive number (or 0 to exit): ";
-    std::cin >> num;
+  // for (int i = 0; i < 20; i++)
+  // {
+  //   arr[i] = i;
+  // }
 
-    if (num < 0)
+  // for (int i = 0; i < 20; i++)
+  // {
+  //   std::cout << arr[i] << std::endl;
+  // }
+
+  const int WEEK = 7, DAY = 4;
+
+  int arr[WEEK][DAY];
+
+  for (int i = 0; i < WEEK; i++)
+  {
+    for (int j = 0; j < DAY; j++)
     {
-      std::cout << "Negative number is not allowed." << std::endl;
-      continue;
+      arr[i][j] = i * j;
     }
+  }
 
-    sum += num;
-  } while (num != 0);
-
-  std::cout << "Sum of all positive numbers entered is: " << sum << std::endl;
+  for (int i = 0; i < WEEK; i++)
+  {
+    for (int j = 0; j < DAY; j++)
+    {
+      std::cout << arr[i][j] << " ";
+    }
+    std::cout << std::endl;
+  }
 
   return 0;
 }
