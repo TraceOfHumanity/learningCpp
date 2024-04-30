@@ -1,18 +1,17 @@
 #include <iostream>
 
-double ToCube(double number);
 
 int main()
 {
-  int a = 4;
+  const int size = 5;
 
-  int *p = &a;
+  int arr[size] = {1, 2, 3, 4, 5};
 
-  int** pp = &p;
+  int *ptr = arr;
 
-  std::cout << "a = " << &a << std::endl;
-  std::cout << "*p = " << &p << std::endl;
-  std::cout << "**pp = " << &pp << std::endl;
-
+  std::cout << ptr << std::endl;
+  std::cout << arr << std::endl;
+  std::cout << &arr << std::endl;
+  std::cout << &arr[0] << std::endl;
   return 0;
 }
