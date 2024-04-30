@@ -1,19 +1,21 @@
 #include <iostream>
 
-void Func();
-
 int main()
 {
-  void (*pFunc)() = Func;
+  int a = 5;
+  double b = 3.14;
 
-  std::cout << "pFunc: " << pFunc << std::endl;
-  std::cout << "Func: " << (&Func) << std::endl;
-  std::cout << "Func: " << reinterpret_cast<void*>(Func) << std::endl;
+  void *ptr = &a;
+
+  std::cout << "&a: " << &a << std::endl;
+  std::cout << "ptr: " << ptr << std::endl;
+  std::cout << "*ptr: " << *(int *)ptr << std::endl;
+
+  ptr = &b;
+
+  std::cout << "&b: " << &b << std::endl;
+  std::cout << "ptr: " << ptr << std::endl;
+  std::cout << "*ptr: " << *(double *)ptr << std::endl;
 
   return 0;
-}
-
-void Func()
-{
-  // std::cout << "Hello, World!" << std::endl;
 }
