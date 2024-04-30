@@ -1,17 +1,19 @@
 #include <iostream>
 
+void Func();
 
 int main()
 {
-  const int size = 5;
+  void (*pFunc)() = Func;
 
-  int arr[size] = {1, 2, 3, 4, 5};
+  std::cout << "pFunc: " << pFunc << std::endl;
+  std::cout << "Func: " << (&Func) << std::endl;
+  std::cout << "Func: " << reinterpret_cast<void*>(Func) << std::endl;
 
-  int *ptr = arr;
-
-  std::cout << ptr << std::endl;
-  std::cout << arr << std::endl;
-  std::cout << &arr << std::endl;
-  std::cout << &arr[0] << std::endl;
   return 0;
+}
+
+void Func()
+{
+  // std::cout << "Hello, World!" << std::endl;
 }
