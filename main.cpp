@@ -8,16 +8,11 @@ int main()
 
   int *p = &a;
 
-  std::cout << "a = " << a << std::endl;
-  std::cout << "&a = " << &a << std::endl;
-  std::cout << "p = " << p << std::endl;
-  std::cout << "*p = " << *p << std::endl;
+  int** pp = &p;
 
-  *p = 5;
+  std::cout << "a = " << &a << std::endl;
+  std::cout << "*p = " << &p << std::endl;
+  std::cout << "**pp = " << &pp << std::endl;
 
-  std::cout << "a = " << a << std::endl;
-  std::cout << "&a = " << &a << std::endl;
-  std::cout << "p = " << p << std::endl;
-  std::cout << "*p = " << *p << std::endl;
   return 0;
 }
