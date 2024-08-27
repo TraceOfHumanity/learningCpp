@@ -2,17 +2,18 @@
 
 int main()
 {
-    int a = 1;
-    int b = 10;
-    int d = 30;
-    
-    const int c = 20;
-    
-    int * const p1 = &a;
-    const int* p2 = &b;
-    
-    p2 = &c;
-    
-    
+  int var = 10;
+  const int CONST = 20;
+
+  int* p1 = &var;
+  int& ref = var;
+
+  *p1 = 100;
+  std::cout << "var: " << var << std::endl;
+  std::cout << "*p1: " << *p1 << std::endl;
+  ref = 200;
+
+  std::cout << "ref: " << ref << std::endl;
+
   return 0;
 }
