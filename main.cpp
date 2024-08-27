@@ -9,10 +9,11 @@ struct Point
 int main()
 {
   Point p1 = {1, 2};
-  Point p2 = {3, 4};
 
-  std::cout << p1.x << std::endl;
-  std::cout << p2.x << std::endl;
+  Point copyPoint(p1);
+
+  std::cout << "p1: " << p1.x << ", " << p1.y << std::endl;
+  std::cout << "copyPoint: " << copyPoint.x << ", " << copyPoint.y << std::endl;
 
   return 0;
 }
