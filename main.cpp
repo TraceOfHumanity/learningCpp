@@ -1,14 +1,19 @@
 #include <iostream>
 
+struct Point
+{
+  int x;
+  int y;
+};
+
 int main()
 {
-  int a = 10;
-  int* p = &a;
+  Point p1 = {1, 2};
+  Point p2 = {3, 4};
 
-  int*& ref = p;
+  Point* p = &p1;
 
-  std::cout << ref << " = " << p << std::endl;
-  std::cout << &ref << " = " << &p << std::endl;
+  std::cout << p->x << std::endl;
 
   return 0;
 }
