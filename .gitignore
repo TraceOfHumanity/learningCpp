@@ -2,3 +2,5 @@
 .DS_Store
 
 *.hpp
+main
+.settings.json

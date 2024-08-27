@@ -1,14 +1,26 @@
 #include <iostream>
 
-union MyUnion
+enum Direction
 {
-  char a;
-  int b;
-  float c;
+  Up,
+  Down,
+  Left,
+  Right
 };
 
 int main()
 {
-  std::cout << sizeof(MyUnion) << std::endl;
+
+  Direction heroDirection = Up;
+
+  switch (heroDirection)
+  {
+  case Up:
+    std::cout << "Up" << std::endl;
+    break;
+  case Down:
+    std::cout << "Down" << std::endl;
+    break;
+  }
   return 0;
 }
