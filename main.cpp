@@ -1,6 +1,6 @@
 #include <iostream>
 
-enum Direction
+enum class Direction
 {
   Up,
   Down,
@@ -11,15 +11,21 @@ enum Direction
 int main()
 {
 
-  Direction heroDirection = Up;
+  Direction heroDirection = Direction::Up;
 
   switch (heroDirection)
   {
-  case Up:
+  case Direction::Up:
     std::cout << "Up" << std::endl;
     break;
-  case Down:
+  case Direction::Down:
     std::cout << "Down" << std::endl;
+    break;
+  case Direction::Left:
+    std::cout << "Left" << std::endl;
+    break;
+  case Direction::Right:
+    std::cout << "Right" << std::endl;
     break;
   }
   return 0;
