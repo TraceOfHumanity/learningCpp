@@ -28,5 +28,6 @@ int main()
     std::cout << "Right" << std::endl;
     break;
   }
+  
   return 0;
 }
