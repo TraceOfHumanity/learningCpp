@@ -1,8 +1,10 @@
-//
-//  StringConversionOperator.cpp
-//  learningCpp
-//
-//  Created by Alexander on 26.09.2024.
-//
+#include <iostream>
+#define SHOW_STRING(str) std::cout << "Hello " #str << std::endl;
 
-#include <stdio.h>
+// using namespace std;
+
+int main()
+{
+  SHOW_STRING(123)
+  return 0;
+}
