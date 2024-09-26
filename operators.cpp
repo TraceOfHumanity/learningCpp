@@ -8,3 +8,4 @@ int main()
   std::cout << TO_STRING(123) << std::endl;
   return 0;
 }
+
