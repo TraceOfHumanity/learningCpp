@@ -22,5 +22,15 @@ int main()
 
   std::cout << std::endl;
 
+  std::cout << "------Floating Point------\n";
+  std::cout << "Float: " << sizeof(float) << " bytes\n";
+  std::cout << "Double: " << sizeof(double) << " bytes\n";
+  std::cout << "Long Double: " << sizeof(long double) << " bytes\n";
+
+  std::cout << std::endl;
+
+  std::cout << "------Boolean------\n";
+  std::cout << "Bool: " << sizeof(bool) << " bytes\n";
+
   return 0;
 }
