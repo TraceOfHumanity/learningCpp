@@ -2,9 +2,18 @@
 
 int main()
 {
-  for (int i = 0; i < 10; i++)
+
+  const int sizeArr = 10;
+  int arr[sizeArr];
+
+  for (int i = 0; i < sizeArr; i++)
   {
-    std::cout << i << " ";
+    arr[i] = i + 1;
+  }
+
+  for (int i = 0; i < sizeArr; i++)
+  {
+    std::cout << arr[i] << " ";
   }
   return 0;
 }
